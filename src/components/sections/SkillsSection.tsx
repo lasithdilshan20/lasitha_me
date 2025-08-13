@@ -16,16 +16,16 @@ export default function SkillsSection() {
       <h2 id="skills-heading" className="text-2xl md:text-3xl font-bold text-cyber-blue animate-glow mb-6">Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {skills.map((g) => (
-          <div key={g.group} className="glass rounded-xl p-5 border border-white/10">
+          <div key={g.group} className="glass rounded-xl p-5 border border-[color:var(--panel-border)]">
             <h3 className="text-lg font-semibold text-cyber-purple mb-4">{g.group}</h3>
             <div className="space-y-3">
               {g.items.map((s, i) => (
                 <div key={s.name}>
                   <div className="flex justify-between text-sm mb-1">
-                    <span className="text-white/80">{s.name}</span>
+                    <span className="text-neutral-700 dark:text-white/80">{s.name}</span>
                     <span className="text-cyber-green">{s.level}%</span>
                   </div>
-                  <div className="h-2 bg-white/10 rounded overflow-hidden">
+                  <div className="h-2 bg-neutral-200 dark:bg-white/10 rounded overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${s.level}%` }}

@@ -31,7 +31,7 @@ export default function AchievementsSection() {
       <h2 id="achievements-heading" className="text-2xl md:text-3xl font-bold text-cyber-blue animate-glow mb-6">Professional Achievements</h2>
 
       <div className="mb-10">
-        <h3 className="text-lg md:text-xl font-semibold text-white/90 mb-3">Featured NPM Package</h3>
+        <h3 className="text-lg md:text-xl font-semibold text-neutral-900 dark:text-white/90 mb-3">Featured NPM Package</h3>
         {featured.isLoading ? (
           <Skeleton className="h-28 w-full" />
         ) : (
@@ -47,7 +47,7 @@ export default function AchievementsSection() {
       </div>
 
       <div>
-        <h3 className="text-lg md:text-xl font-semibold text-white/90 mb-3">Other Packages</h3>
+        <h3 className="text-lg md:text-xl font-semibold text-neutral-900 dark:text-white/90 mb-3">Other Packages</h3>
         {userPkgs.isLoading && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {Array.from({ length: 6 }).map((_, i) => (
@@ -56,7 +56,7 @@ export default function AchievementsSection() {
           </div>
         )}
         {userPkgs.error && (
-          <div className="glass rounded-xl p-4 border border-white/10">
+          <div className="glass rounded-xl p-4 border border-[color:var(--panel-border)]">
             <p className="text-red-400">Failed to load NPM packages.</p>
           </div>
         )}

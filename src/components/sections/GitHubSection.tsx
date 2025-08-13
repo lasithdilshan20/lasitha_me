@@ -28,7 +28,7 @@ export default function GitHubSection() {
       )}
 
       {error && (
-        <div className="glass rounded-xl p-4 border border-white/10 mb-6">
+        <div className="glass rounded-xl p-4 border border-[color:var(--panel-border)] mb-6">
           <p className="text-red-400">Failed to load GitHub data. <button className="underline" onClick={() => mutate()}>Retry</button></p>
         </div>
       )}
@@ -46,13 +46,13 @@ export default function GitHubSection() {
           <Skeleton key={i} className="h-40 w-full" />
         ))}
         {!isLoading && repositories.map((repo: any) => (
-          <a key={repo.id} href={repo.html_url} target="_blank" rel="noreferrer" className="group glass rounded-xl p-5 border border-white/10 hover:shadow-neon transition block">
+          <a key={repo.id} href={repo.html_url} target="_blank" rel="noreferrer" className="group glass rounded-xl p-5 border border-[color:var(--panel-border)] hover:shadow-neon transition block">
             <div className="flex items-start justify-between gap-4">
               <div>
                 <h3 className="font-semibold text-cyber-blue group-hover:text-cyber-green transition">{repo.name}</h3>
-                {repo.description && <p className="mt-1 text-sm text-white/80 line-clamp-3">{repo.description}</p>}
+                {repo.description && <p className="mt-1 text-sm text-neutral-700 dark:text-white/80 line-clamp-3">{repo.description}</p>}
               </div>
-              <div className="text-sm text-white/70 whitespace-nowrap">⭐ {compactNumber(repo.stargazers_count)}</div>
+              <div className="text-sm text-neutral-600 dark:text-white/70 whitespace-nowrap">⭐ {compactNumber(repo.stargazers_count)}</div>
             </div>
             <div className="mt-3 flex flex-wrap gap-2 text-xs">
               {repo.language && (

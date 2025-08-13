@@ -2,11 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light is default; dark overrides via .dark on <html> from next-themes */
 :root {
-  --bg: #0a0a0f;
+  --bg: #f5f7fb; /* light background */
+  --text: #0a0a0f; /* light text */
   --blue: #00d4ff;
   --green: #39ff14;
   --purple: #8a2be2;
+  --panel-border: rgba(0,0,0,0.12);
+}
+
+.dark {
+  --bg: #0a0a0f; /* dark background */
+  --text: #ffffff; /* dark text */
+  --panel-border: rgba(255,255,255,0.08);
 }
 
 html {
@@ -14,7 +23,10 @@ html {
 }
 
 body {
-  @apply bg-[color:var(--bg)] text-white antialiased;
+  @apply antialiased;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 /* Glassmorphism helper */
@@ -22,7 +34,7 @@ body {
   background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--panel-border);
 }
 
 /* Neon gradient border */
@@ -53,6 +65,7 @@ body {
 /* High-contrast mode toggle class */
 .high-contrast {
   --bg: #000000;
+  --text: #ffffff;
 }
 
 /***** Reduced motion adjustments *****/

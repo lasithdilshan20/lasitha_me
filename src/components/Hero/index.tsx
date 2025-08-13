@@ -65,8 +65,8 @@ function TerminalSimulator() {
     return () => clearInterval(t);
   }, [steps]);
   return (
-    <div className="glass rounded-xl p-4 md:p-6 text-xs md:text-sm font-mono text-cyber-blue shadow-neon border border-white/10">
-      <div className="flex items-center gap-2 mb-3 text-white/70">
+    <div className="glass rounded-xl p-4 md:p-6 text-xs md:text-sm font-mono text-cyber-blue shadow-neon border border-[color:var(--panel-border)]">
+      <div className="flex items-center gap-2 mb-3 text-neutral-600 dark:text-white/70">
         <span className="h-3 w-3 rounded-full bg-red-500/70"></span>
         <span className="h-3 w-3 rounded-full bg-yellow-500/70"></span>
         <span className="h-3 w-3 rounded-full bg-green-500/70"></span>
@@ -74,7 +74,7 @@ function TerminalSimulator() {
       </div>
       <div className="space-y-1 max-h-40 overflow-auto pr-1">
         {logs.map((l, i) => (
-          <div key={i} className="text-white/90">
+          <div key={i} className="text-neutral-900 dark:text-white/90">
             {l}
           </div>
         ))}

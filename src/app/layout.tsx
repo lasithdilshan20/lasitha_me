@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen bg-cyber-bg text-white selection:bg-cyber-blue/40">
+      <body className="min-h-screen selection:bg-cyber-blue/40 transition-colors">
         <ThemeProvider>
           <header className="fixed top-0 left-0 right-0 z-40">
             <div className="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">

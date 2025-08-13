@@ -57,9 +57,9 @@ export default function ProjectsSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((p) => (
           <TiltCard key={p.title}>
-            <a href={p.link} className="block group glass rounded-2xl p-5 border border-white/10 hover:shadow-neon">
+            <a href={p.link} className="block group glass rounded-2xl p-5 border border-[color:var(--panel-border)] hover:shadow-neon">
               <h3 className="text-lg font-semibold text-cyber-blue group-hover:text-cyber-green transition">{p.title}</h3>
-              <p className="mt-2 text-sm text-white/80">{p.desc}</p>
+              <p className="mt-2 text-sm text-neutral-700 dark:text-white/80">{p.desc}</p>
               <div className="mt-3 flex flex-wrap gap-2 text-xs">
                 {p.badges.map((b) => (
                   <span key={b} className="px-2 py-1 rounded bg-cyber-blue/20 text-cyber-blue border border-cyber-blue/40">{b}</span>

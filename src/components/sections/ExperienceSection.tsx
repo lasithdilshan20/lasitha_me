@@ -32,11 +32,11 @@ export default function ExperienceSection() {
           <motion.div key={e.company} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} className="mb-8">
             <div className="absolute -left-2.5 mt-1 h-4 w-4 rounded-full bg-cyber-green shadow-neon" />
             <div className="flex flex-wrap items-baseline gap-2">
-              <div className="text-white/90 font-semibold">{e.role}</div>
+              <div className="font-semibold text-neutral-900 dark:text-white/90">{e.role}</div>
               <div className="text-cyber-purple">@ {e.company}</div>
-              <div className="text-xs text-white/60 ml-auto">{e.period}</div>
+              <div className="text-xs text-neutral-500 dark:text-white/60 ml-auto">{e.period}</div>
             </div>
-            <ul className="mt-2 list-disc pl-5 text-white/85 space-y-1">
+            <ul className="mt-2 list-disc pl-5 text-neutral-800 dark:text-white/85 space-y-1">
               {e.details.map((d) => (
                 <li key={d}>{d}</li>
               ))}
