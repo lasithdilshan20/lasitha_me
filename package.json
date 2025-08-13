@@ -1,0 +1,36 @@
+{
+  "name": "lasitha-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.105.2",
+    "@react-three/fiber": "^8.15.16",
+    "autoprefixer": "^10.4.20",
+    "classnames": "^2.5.1",
+    "framer-motion": "^11.2.6",
+    "gsap": "^3.12.5",
+    "next": "^14.2.5",
+    "next-themes": "^0.2.1",
+    "postcss": "^8.4.41",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "swr": "^2.2.5",
+    "tailwindcss": "^3.4.10",
+    "three": "^0.166.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.5",
+    "typescript": "^5.5.4"
+  }
+}
